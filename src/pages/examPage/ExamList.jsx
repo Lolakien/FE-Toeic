@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Exam from './components/Exam';
-import Header from '../../components/header';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 function ExamList() {
   const [exams, setExams] = useState([]);
@@ -26,27 +26,27 @@ function ExamList() {
 
 
 
-  
+
 
   return (
-   <>
-   <Header/>
-   <div className="max-w-7xl mx-auto p-5">
-      <h1 className="text-2xl font-bold text-blue-700 mb-6">Danh sách bài thi</h1>
-      
-      {/* Layout 2 cột */}
-      <div className="grid grid-cols-12 gap-6">
+    <>
+      <Header />
+      <div className="max-w-7xl mx-auto p-5">
+        <h1 className="text-2xl font-bold text-blue-700 mb-6">Danh sách bài thi</h1>
 
-        {/* Cột phải: Danh sách Exam */}
-        <div className="col-span-12 md:col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredExams.map((exam, index) => (
-            <Exam key={index} exam={exam} />
-          ))}
+        {/* Layout 2 cột */}
+        <div className="grid grid-cols-12 gap-6">
+
+          {/* Cột phải: Danh sách Exam */}
+          <div className="col-span-12 md:col-span-9 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredExams.map((exam, index) => (
+              <Exam key={index} exam={exam} />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-    <Footer/>
-   </>
+      <Footer />
+    </>
   );
 }
 
