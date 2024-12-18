@@ -1,10 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Header from '../../components/header';
-import Footer from '../../components/Footer';
-
-import Writing from './Writing'; // Adjust the import path as necessary
-import Speaking from './Speaking'; // Adjust the import path as necessary
+import Header from '../../components/Header';
 import Listening from './Listening'; // Adjust the import path as necessary
 import Reading from './Reading'; // Adjust the import path as necessary
 
