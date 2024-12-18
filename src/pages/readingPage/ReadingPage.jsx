@@ -1,7 +1,7 @@
 import PartItem from "../../components/PartItem";
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import Header from "../../components/header";
+import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { useNavigate } from 'react-router-dom';
 import { useUser } from '../../hooks/UserContext';
@@ -11,7 +11,7 @@ function ReadingPage() {
     const navigate = useNavigate();
 
 
-    useEffect(() => {  
+    useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get(`http://localhost:3000/api/questions/user-question-stats/${user.id}`);
@@ -28,7 +28,7 @@ function ReadingPage() {
     const handleClick = (partId) => {
         navigate(`/reading/part/${partId}`);
     };
-    const filteredStats = stats.filter(stat => stat.PartID >= 5 );
+    const filteredStats = stats.filter(stat => stat.PartID >= 5);
     return (
         <>
             <Header />
